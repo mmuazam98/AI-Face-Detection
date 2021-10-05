@@ -1,3 +1,4 @@
+//Getting the HTML Nodes
 const video = document.getElementById("video");
 
 Promise.all([
@@ -15,6 +16,7 @@ function startVideo() {
   );
 }
 
+//Adding play event to the vidoe element
 video.addEventListener("play", () => {
   const canvas = faceapi.createCanvasFromMedia(video);
   document.body.append(canvas);
